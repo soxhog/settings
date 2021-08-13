@@ -82,3 +82,16 @@ zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^p" history-beginning-search-backward-end
 bindkey "^n" history-beginning-search-forward-end
+PATH="$HOME/homebrew/bin:$PATH"
+
+# 同時に起動した zsh の間でヒストリを共有する
+setopt share_history
+
+# 直前と同じコマンドの場合はヒストリに追加しない
+setopt hist_ignore_dups
+
+# 同じコマンドをヒストリに残さない
+setopt hist_ignore_all_dups
+
+# zsh-completions の設定。コマンド補完機能
+autoload -U compinit && compinit -u
