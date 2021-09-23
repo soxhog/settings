@@ -95,3 +95,9 @@ setopt hist_ignore_all_dups
 
 # zsh-completions の設定。コマンド補完機能
 autoload -U compinit && compinit -u
+
+alias gs='git status'
+
+alias gl='git log'
+
+alias gg='git grep'
